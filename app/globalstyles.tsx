@@ -1,4 +1,8 @@
-:root {
+'use client';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+  :root {
 	--max-width: 1100px;
 	--font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
 		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -21,17 +25,17 @@ body {
 }
 
 body {
-	color: rgb(var(--foreground-rgb));
-	background: 'red';
+	background-color: var(--background-color)
+}
+
+p {
+	color: var(--text-color)
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
 }
+`;
 
-/* @media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-} */
+export default GlobalStyles;

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import StyledComponentsRegistry from './lib/registry';
+import GlobalStyles from './globalstyles';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<link rel='icon' type='image/x-icon' href='/favicon.png'></link>
+			<body className={inter.className}>
+				<StyledComponentsRegistry>
+					<GlobalStyles />
+					{children}
+				</StyledComponentsRegistry>
+			</body>
 		</html>
 	);
 }

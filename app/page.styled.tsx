@@ -1,0 +1,7 @@
+'use client';
+import styled from 'styled-components';
+
+export const StyledMainContainer = styled.div`
+	display: flex;
+	min-height: 100vh;
+`;

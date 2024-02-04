@@ -1,11 +1,12 @@
-import styles from './page.module.css';
+import { StyledMainContainer } from './page.styled';
+import { Header } from './ui/header/Header';
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
-			<div className={styles.description}>
-				<p>Hi, I&#39;m Kate</p>
+		<StyledMainContainer>
+			<div className='description'>
+				<Header />
 			</div>
-		</main>
+		</StyledMainContainer>
 	);
 }
