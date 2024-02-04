@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	color: var(--text-color);
 }
 
 html,
@@ -25,12 +26,15 @@ body {
 }
 
 body {
-	background-color: var(--background-color)
+	background-color: var(--background-color);
 }
-
-p {
+/* 
+h1{
 	color: var(--text-color)
 }
+p {
+	color: var(--text-color)
+} */
 
 a {
 	color: inherit;

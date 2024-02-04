@@ -14,7 +14,7 @@ export const Header = () => {
 			</CodeImageContainer>
 			<ProfileContainer>
 				<div className='text'>
-					<p>Hi, I&#39;m Kate</p>
+					<h1>Hi, I&#39;m Kate</h1>
 					<p className='intro'>
 						An aspiring frontend developer driven to tackle new challenges and
 						grow within a strong team.{' '}
