@@ -6,6 +6,7 @@ export const StyledHeader = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100vw;
+	height: 300px;
 `;
 
 export const CodeImageContainer = styled.div`
@@ -30,7 +31,7 @@ export const ProfileContainer = styled.div`
 	top: 50px;
 
 	.intro {
-		font-size: 14px;
+		font-size: 16px;
 		max-width: 320px;
 		line-height: 18px;
 	}
@@ -51,14 +52,3 @@ export const ProfileImageContainer = styled.div`
 	margin-right: 20px;
 	box-shadow: 0 0 4px 1px black;
 `;
-
-// Mobile
-/* @media (max-width: 700px) {}
- */
-
-/* Tablet and Smaller Desktop */
-/* @media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-} */
