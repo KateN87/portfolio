@@ -34,8 +34,12 @@ export const FirstContainer = styled.div`
 `;
 export const SecondContainer = styled.div`
 	display: flex;
-	height: 100vh;
-	align-items: center;
+	flex-wrap: wrap;
+	align-self: center;
+	height: fit-content;
+	min-height: 100vh;
+	width: 80vw;
+	min-width: 500px;
 `;
 
 export const Logos = styled.div<LogoProps>`

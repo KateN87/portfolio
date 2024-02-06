@@ -11,6 +11,7 @@ import LogoContainer from './ui/LogoContainer/LogoContainer';
 import { Header } from './ui/header/Header';
 import About from './ui/About/About';
 import { TechStack } from './ui/TechStack/TechStack';
+import { Projects } from './ui/Projects/Projects';
 
 export default function Home() {
 	const firstRef = useRef<HTMLDivElement | null>(null);
@@ -52,12 +53,17 @@ export default function Home() {
 	return (
 		<StyledMainContainer onWheel={(e) => wheel(e)}>
 			<FirstContainer ref={firstRef}>
-				<Header />
+				<div>
+					<Header />
+					<Projects />
+				</div>
 				<SlArrowDown className='arrowDown' onClick={scrollDown} />
+
 				<Logos topSite={topSite}>
 					<LogoContainer topSite={topSite} />
 				</Logos>
 			</FirstContainer>
+
 			<SecondContainer ref={secondRef}>
 				<SlArrowUp className='arrowUp' onClick={scrollUp} />
 				<TechStack />
