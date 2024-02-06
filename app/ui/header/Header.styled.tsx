@@ -12,7 +12,7 @@ export const StyledHeader = styled.div`
 export const CodeImageContainer = styled.div`
 	position: relative;
 	display: flex;
-	height: 500px;
+	height: 400px;
 	min-width: 350px;
 	width: 60vw;
 	filter: blur(2px);
