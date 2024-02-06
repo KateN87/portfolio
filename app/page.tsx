@@ -1,5 +1,5 @@
 'use client';
-import { useRef, WheelEvent } from 'react';
+import { useRef, useState, WheelEvent } from 'react';
 import {
 	StyledMainContainer,
 	Logos,
@@ -15,10 +15,12 @@ import { TechStack } from './ui/TechStack/TechStack';
 export default function Home() {
 	const firstRef = useRef<HTMLDivElement | null>(null);
 	const secondRef = useRef<HTMLDivElement | null>(null);
+	const [topSite, setTopSite] = useState(true);
 
 	const scrollDown = () => {
-		const offsetTop = firstRef.current?.offsetTop;
+		const offsetTop = secondRef.current?.offsetTop;
 		if (offsetTop !== undefined) {
+			setTopSite(false);
 			window.scrollTo({
 				top: offsetTop,
 				behavior: 'smooth',
@@ -27,8 +29,9 @@ export default function Home() {
 	};
 
 	const scrollUp = () => {
-		const offsetTop = secondRef.current?.offsetTop;
+		const offsetTop = firstRef.current?.offsetTop;
 		if (offsetTop !== undefined) {
+			setTopSite(true);
 			window.scrollTo({
 				top: offsetTop,
 				behavior: 'smooth',
@@ -48,17 +51,17 @@ export default function Home() {
 
 	return (
 		<StyledMainContainer onWheel={(e) => wheel(e)}>
-			<FirstContainer ref={secondRef}>
+			<FirstContainer ref={firstRef}>
 				<Header />
 				<SlArrowDown className='arrowDown' onClick={scrollDown} />
-				<Logos>
-					<LogoContainer />
+				<Logos topSite={topSite}>
+					<LogoContainer topSite={topSite} />
 				</Logos>
 			</FirstContainer>
-			<SecondContainer ref={firstRef}>
+			<SecondContainer ref={secondRef}>
 				<SlArrowUp className='arrowUp' onClick={scrollUp} />
-				<About />
 				<TechStack />
+				<About />
 			</SecondContainer>
 		</StyledMainContainer>
 	);

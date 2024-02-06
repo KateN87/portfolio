@@ -12,10 +12,10 @@ export const StyledHeader = styled.div`
 export const CodeImageContainer = styled.div`
 	position: relative;
 	display: flex;
-	height: 300px;
-	min-width: 250px;
-	width: 50vw;
-	filter: blur(0.5px);
+	height: 500px;
+	min-width: 350px;
+	width: 60vw;
+	filter: blur(2px);
 `;
 
 export const ProfileContainer = styled.div`
@@ -25,14 +25,14 @@ export const ProfileContainer = styled.div`
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	align-items: center;
-	width: 60vw;
+	width: 70vw;
 	min-width: 500px;
 	right: 20px;
 	top: 50px;
 
 	.intro {
 		font-size: 16px;
-		max-width: 320px;
+		max-width: 420px;
 		line-height: 18px;
 	}
 
@@ -47,8 +47,8 @@ export const ProfileContainer = styled.div`
 
 export const ProfileImageContainer = styled.div`
 	position: relative;
-	height: 190px;
-	width: 150px;
-	margin-right: 20px;
+	margin-top: 10px;
+	height: 200px;
+	width: 160px;
 	box-shadow: 0 0 4px 1px black;
 `;

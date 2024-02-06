@@ -3,3 +3,7 @@ export type logoInfo = {
 	image: string;
 	name: string;
 };
+
+export type LogoProps = {
+	topSite: boolean;
+};

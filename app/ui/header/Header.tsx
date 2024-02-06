@@ -24,7 +24,8 @@ export const Header = () => {
 				<ProfileImageContainer>
 					<Image
 						src='/profile-edit.png'
-						fill={true}
+						height={200}
+						width={160}
 						alt='black and white photo of woman'
 					/>
 				</ProfileImageContainer>

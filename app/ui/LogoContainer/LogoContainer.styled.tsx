@@ -1,60 +1,87 @@
 'use client';
+import { LogoProps } from '@/app/lib/definitions';
 import styled from 'styled-components';
 
-export const StyledLogoContainer = styled.div`
+export const StyledLogoContainer = styled.div<LogoProps>`
+	/* position: relative; */
 	display: flex;
 	flex-wrap: wrap;
-	width: 500px;
-	height: 400px;
 
 	& .javascript {
 		bottom: 250px;
 		right: 200px;
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(1) translate(0%, 0%)'
+				: 'scale(1) translate(-400%, -400%)'};
+		transition: transform 0.5s;
 	}
 
 	& .react {
-		right: 50px;
 		bottom: 250px;
-		width: 120px;
-		height: 120px;
+		right: 50px;
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(1.4) translate(0%, 0%)'
+				: 'scale(1.4) translate(-390%, -290%)'};
+		/* transition: transform 0.5s; */
 	}
 
 	& .typescript {
 		bottom: 150px;
 		right: 300px;
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(1) translate(0%, 0%)'
+				: 'scale(1) translate(-42%, -655%)'};
+		transition: transform 0.5s;
 	}
 
 	& .mongodb {
-		bottom: 50px;
+		bottom: 35px;
 		right: 20px;
-		width: 80px;
-		height: 80px;
+
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(0.9) translate(0%, 0%)'
+				: 'scale(1) translate(-510%, -940%)'};
+		transition: transform 0.5s;
 	}
 
 	& .firebase {
-		bottom: 0px;
-		right: 300px;
-		width: 180px;
-		height: 140px;
+		bottom: 40px;
+		right: 370px;
+		height: ${(props) => (props?.topSite ? '50px' : '30px')};
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(3) translate(0%, 0%)'
+				: 'scale(2.8) translate(275%, -445%)'};
+		transition: transform 0.5s;
 	}
 
 	& .node {
-		bottom: 130px;
-		right: 80px;
-		width: 140px;
-		height: 140px;
+		bottom: 150px;
+		right: 90px;
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(2) translate(0%, 0%)'
+				: 'scale(2.2) translate(-70%, -300%)'};
+		transition: 0.5s;
 	}
 
 	& .mysql {
-		bottom: 50px;
-		right: 150px;
-		width: 100px;
-		height: 100px;
+		bottom: 40px;
+		right: 170px;
+		transform: ${(props) =>
+			props?.topSite
+				? 'scale(1.4) translate(0%, 0%)'
+				: 'scale(1.5) translate(310%, -620%)'};
+		transition: transform 0.5s;
 	}
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.div<LogoProps>`
 	position: absolute;
-	width: 90px;
-	height: 90px;
+	width: ${(props) => (props?.topSite ? '90px' : '40px')};
+	height: ${(props) => (props?.topSite ? '90px' : '40px')};
 `;
