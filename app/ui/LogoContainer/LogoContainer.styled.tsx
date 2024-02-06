@@ -3,7 +3,6 @@ import { LogoProps } from '@/app/lib/definitions';
 import styled from 'styled-components';
 
 export const StyledLogoContainer = styled.div<LogoProps>`
-	/* position: relative; */
 	display: flex;
 	flex-wrap: wrap;
 
