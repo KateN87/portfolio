@@ -11,12 +11,14 @@ import LogoContainer from './ui/LogoContainer/LogoContainer';
 import { Header } from './ui/header/Header';
 import About from './ui/About/About';
 import { TechStack } from './ui/TechStack/TechStack';
-import { Projects } from './ui/Projects/Projects';
+import ProjectsList from './ui/ProjectsList/ProjectsList';
+import ProjectContainer from './ui/ProjectContainer/ProjectContainer';
 
 export default function Home() {
 	const firstRef = useRef<HTMLDivElement | null>(null);
 	const secondRef = useRef<HTMLDivElement | null>(null);
 	const [topSite, setTopSite] = useState(true);
+	const [chosenProject, setChosenProject] = useState('');
 
 	const scrollDown = () => {
 		const offsetTop = secondRef.current?.offsetTop;
@@ -53,15 +55,20 @@ export default function Home() {
 	return (
 		<StyledMainContainer onWheel={(e) => wheel(e)}>
 			<FirstContainer ref={firstRef}>
-				<div>
-					<Header />
-					<Projects />
+				<Header />
+				<ProjectsList setChosenProject={setChosenProject} />
+				{chosenProject && (
+					<ProjectContainer
+						setChosenProject={setChosenProject}
+						chosenProject={chosenProject}
+					/>
+				)}
+				<div className='logo-arrow'>
+					<SlArrowDown className='arrowDown' onClick={scrollDown} />
+					<Logos topSite={topSite}>
+						<LogoContainer topSite={topSite} />
+					</Logos>
 				</div>
-				<SlArrowDown className='arrowDown' onClick={scrollDown} />
-
-				<Logos topSite={topSite}>
-					<LogoContainer topSite={topSite} />
-				</Logos>
 			</FirstContainer>
 
 			<SecondContainer ref={secondRef}>
