@@ -5,17 +5,14 @@ import { LogoProps } from './lib/definitions';
 export const StyledMainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	min-height: 200vh;
+	height: 200vh;
 
 	& .arrowDown,
 	.arrowUp {
-		position: absolute;
-		display: flex;
-		align-self: flex-end;
 		width: 74px;
 		height: 74px;
-		left: 50vw;
 		fill: #f9ead984;
+		align-self: flex-end;
 		cursor: pointer;
 
 		& :hover {
@@ -24,13 +21,25 @@ export const StyledMainContainer = styled.div`
 	}
 
 	& .arrowUp {
-		align-self: flex-start;
+		/* align-self: flex-start; */
 	}
 `;
 
 export const FirstContainer = styled.div`
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	height: 100vh;
+	width: 100vw;
+
+	& .logo-arrow {
+		display: flex;
+		align-self: flex-end;
+		justify-content: space-between;
+		width: 50vw;
+		height: 40%;
+		margin-right: 35px;
+	}
 `;
 export const SecondContainer = styled.div`
 	display: flex;
@@ -45,11 +54,14 @@ export const SecondContainer = styled.div`
 export const Logos = styled.div<LogoProps>`
 	display: flex;
 	width: 40vw;
-	margin-left: 105px;
-	height: ${(props) => (props?.topSite ? '40vh' : '40vh')};
-	min-height: ${(props) => (props?.topSite ? '400px' : '80px')};
-	margin-right: ${(props) => (props?.topSite ? '10px' : 'auto')};
-	transform: ${(props) =>
+	/* 	align-self: flex-end;
+	justify-self: flex-end; */
+	/* margin-left: 105px; */
+	height: 100%;
+	/* margin-right: 10px; */
+	/* 	min-height: ${(props) => (props?.topSite ? '400px' : '80px')};
+	margin-right: ${(props) => (props?.topSite ? '10px' : 'auto')}; */
+	/* 	transform: ${(props) =>
 		props?.topSite ? 'translate(0%, 140%)' : 'translate(-240%, 270%)'};
-	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out; */
 `;
