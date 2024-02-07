@@ -19,3 +19,10 @@ export type ProjectListProps = {
 		| 'E-commerce'
 		| '';
 };
+
+export type ProjectInfoProps = {
+	title: string;
+	description: string;
+	techfront: string;
+	techback?: string;
+};

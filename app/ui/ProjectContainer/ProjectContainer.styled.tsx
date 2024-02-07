@@ -14,8 +14,22 @@ export const StyledProjectContainer = styled.div`
 `;
 
 export const InnerContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	background-color: var(--background-color);
 	border: 2px solid var(--text-color);
 	width: 60vw;
 	height: 70vh;
+
+	& h2 {
+		height: fit-content;
+		padding: 10px 15px;
+		font-size: 36px;
+		color: #f9ead984;
+		cursor: pointer;
+
+		&:hover {
+			color: #f9ead9;
+		}
+	}
 `;
