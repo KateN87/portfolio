@@ -25,7 +25,7 @@ export const StyledMainContainer = styled.div<ChosenProps>`
 	}
 
 	& .arrowUp {
-		/* align-self: flex-start; */
+		align-self: center;
 	}
 `;
 
@@ -45,22 +45,32 @@ export const FirstContainer = styled.div`
 		margin-right: 35px;
 	}
 `;
+
 export const SecondContainer = styled.div`
 	display: flex;
-	flex-wrap: wrap;
-	align-self: center;
-	height: fit-content;
-	min-height: 100vh;
-	width: 80vw;
-	min-width: 500px;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+
+	& .tech-about {
+		display: flex;
+		justify-content: space-between;
+		padding: 40px;
+	}
+
+	& .arrow {
+		display: flex;
+		width: fit-content;
+		align-self: center;
+	}
 `;
 
 export const Logos = styled.div<LogoProps>`
 	display: flex;
 	width: 40vw;
-	/* 	align-self: flex-end;
-	justify-self: flex-end; */
-	/* margin-left: 105px; */
+	align-self: flex-end;
+	justify-self: flex-end;
+	margin-left: 105px;
 	height: 100%;
 	/* margin-right: 10px; */
 	/* 	min-height: ${(props) => (props?.topSite ? '400px' : '80px')};

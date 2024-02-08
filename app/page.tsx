@@ -72,9 +72,13 @@ export default function Home() {
 			</FirstContainer>
 
 			<SecondContainer ref={secondRef}>
-				<SlArrowUp className='arrowUp' onClick={scrollUp} />
-				<TechStack />
-				<About />
+				<div className='arrow'>
+					<SlArrowUp className='arrowUp' onClick={scrollUp} />
+				</div>
+				<div className='tech-about'>
+					<TechStack />
+					<About />
+				</div>
 			</SecondContainer>
 		</StyledMainContainer>
 	);

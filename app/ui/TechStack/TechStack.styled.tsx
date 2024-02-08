@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledTechStack = styled.div`
 	height: fit-content;
-	margin-right: 200px;
 
 	& li {
 		list-style: none;
