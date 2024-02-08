@@ -2,7 +2,11 @@
 import styled from 'styled-components';
 import { LogoProps } from './lib/definitions';
 
-export const StyledMainContainer = styled.div`
+type ChosenProps = {
+	chosenProject?: string;
+};
+
+export const StyledMainContainer = styled.div<ChosenProps>`
 	display: flex;
 	flex-direction: column;
 	height: 200vh;

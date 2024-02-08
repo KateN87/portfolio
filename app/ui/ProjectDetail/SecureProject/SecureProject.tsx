@@ -1,5 +1,11 @@
+import Image from 'next/image';
 import ProjectInfo from '../../ProjectInfo/ProjectInfo';
-import { StyledSecureProject } from './SecureProject.styled';
+import {
+	ImageContainer,
+	StyledBottomContainer,
+	StyledSecureProject,
+	StyledTopContainer,
+} from './SecureProject.styled';
 import {
 	TITLES,
 	DESCRIPTION,
@@ -10,12 +16,37 @@ import {
 const SecureProject = () => {
 	return (
 		<StyledSecureProject>
-			<ProjectInfo
-				title={TITLES.SECURE}
-				description={DESCRIPTION.SECURE}
-				techfront={TECHFRONT.SECURE}
-				techback={TECHBACK.SECURE}
-			/>
+			<StyledTopContainer>
+				<ProjectInfo
+					title={TITLES.SECURE}
+					description={DESCRIPTION.SECURE}
+					techfront={TECHFRONT.SECURE}
+					techback={TECHBACK.SECURE}
+				/>
+				<ImageContainer>
+					<Image
+						src='/ProjectImages/secure1.png'
+						fill={true}
+						alt='black and white photo of woman'
+					/>
+				</ImageContainer>
+			</StyledTopContainer>
+			<StyledBottomContainer>
+				<ImageContainer>
+					<Image
+						src='/ProjectImages/secure2.png'
+						fill={true}
+						alt='black and white photo of woman'
+					/>
+				</ImageContainer>
+				<ImageContainer>
+					<Image
+						src='/ProjectImages/secure3.png'
+						fill={true}
+						alt='black and white photo of woman'
+					/>
+				</ImageContainer>
+			</StyledBottomContainer>
 		</StyledSecureProject>
 	);
 };

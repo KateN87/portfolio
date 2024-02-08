@@ -28,10 +28,10 @@ const ProjectContainer = ({
 	};
 
 	return (
-		<StyledProjectContainer>
+		<StyledProjectContainer chosenProject={chosenProject}>
 			<InnerContainer>
-				<Project />
 				<h2 onClick={() => setChosenProject('')}>X</h2>
+				<Project />
 			</InnerContainer>
 		</StyledProjectContainer>
 	);

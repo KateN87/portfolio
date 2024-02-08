@@ -12,12 +12,7 @@ export type LogoProps = {
 
 export type ProjectListProps = {
 	setChosenProject: Dispatch<SetStateAction<string>>;
-	chosenProject?:
-		| 'Secure e-commerce'
-		| 'Mobile app'
-		| 'Social media Platform'
-		| 'E-commerce'
-		| '';
+	chosenProject?: string;
 };
 
 export type ProjectInfoProps = {
