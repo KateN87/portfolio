@@ -21,3 +21,23 @@ export type ProjectInfoProps = {
 	techfront: string;
 	techback?: string;
 };
+
+export type ProjectObject = {
+	title: string;
+	description: string;
+	techfront: string;
+	techback?: string;
+	image1: string;
+	alt1: string;
+	image2: string;
+	alt2: string;
+	image3?: string;
+	alt3?: string;
+	title2?: string;
+	description2?: string;
+	techfront2?: string;
+};
+
+export type ProjectProps = {
+	project: ProjectObject;
+};

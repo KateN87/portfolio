@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-type ChosenProps = {
-	chosenProject?: string;
-};
-export const StyledProjectContainer = styled.div<ChosenProps>`
+export const StyledProjectContainer = styled.div`
 	display: flex;
 	position: absolute;
 	align-items: center;

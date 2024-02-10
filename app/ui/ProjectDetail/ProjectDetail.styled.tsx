@@ -1,15 +1,24 @@
 import styled from 'styled-components';
 
-export const StyledBookProject = styled.div`
+//all the same
+export const StyledSecureProject = styled.div`
 	width: 100%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 `;
 
+//
 export const StyledTopContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 50%;
+	height: 50%; //mobile project 30%
+
+	&.version2 {
+		height: 30%;
+	}
 `;
 
 export const StyledBottomContainer = styled.div`
@@ -17,21 +26,43 @@ export const StyledBottomContainer = styled.div`
 	flex-direction: row;
 	justify-content: space-evenly;
 	height: 50%;
+
+	// mobile
+	&.version2 {
+		height: 70%;
+	}
 `;
 
+// secure
 export const ImageContainer = styled.div`
 	position: relative;
-	width: 110%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	margin: 10px;
 
-	&.imageVersion2 {
+	//mobile
+	&.version2 {
+		width: 30%;
+	}
+
+	// social
+	&.version3 {
+		width: 100%;
+	}
+
+	//book
+	&.version4 {
+		width: 110%;
+		height: 100%;
+		margin: 10px;
+	}
+	&.version5 {
 		margin-top: 50px;
 		width: 60%;
 		height: 60%;
 	}
 
-	&.imageVersion3 {
+	&.version6 {
 		margin-top: 30px;
 		width: 40%;
 		height: 80%;
