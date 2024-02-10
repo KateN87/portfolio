@@ -16,7 +16,7 @@ const ProjectsList = ({ setChosenProject }: ProjectListProps) => {
 				{projectArray.map((project) => (
 					<li key={project} onClick={() => setChosenProject(project)}>
 						{project}
-						<SlArrowRight className='arrow' />
+						<SlArrowRight className='arrow' viewBox=' 100 100 800 800' />
 					</li>
 				))}
 			</ul>
