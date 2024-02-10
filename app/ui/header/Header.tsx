@@ -5,6 +5,7 @@ import {
 	ProfileContainer,
 	ProfileImageContainer,
 } from './Header.styled';
+import Link from 'next/link';
 
 export const Header = () => {
 	return (
@@ -19,6 +20,31 @@ export const Header = () => {
 						An aspiring frontend developer driven to tackle new challenges and
 						grow within a strong team.
 					</p>
+					<div className='contact'>
+						<p>
+							<b>email:</b> kate.nordqvist@gmail.com
+						</p>
+						<p>
+							<b>linkedin:</b>{' '}
+							<Link
+								href='https://www.linkedin.com/in/knordqvist'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								linkedin.com/in/knordqvist
+							</Link>
+						</p>
+						<p>
+							<b>github: </b>{' '}
+							<Link
+								href='https://www.github.com/KateN87'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								github.com/KateN87
+							</Link>
+						</p>
+					</div>
 				</div>
 
 				<ProfileImageContainer>
