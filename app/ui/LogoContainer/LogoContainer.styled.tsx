@@ -3,84 +3,121 @@ import { LogoProps } from '@/app/lib/definitions';
 import styled from 'styled-components';
 
 export const StyledLogoContainer = styled.div<LogoProps>`
-	/* 	display: flex; */
-	/* flex-wrap: wrap; */
+	position: relative;
+	display: flex;
+	flex-direction: ${(props) => (props?.topSite ? 'column' : 'row')};
+	height: ${(props) => (props?.topSite ? '300px' : '60px')};
+	width: fit-content;
+	z-index: 90;
+
+	margin-bottom: ${(props) => (props?.topSite ? '35px' : '')};
+	margin-top: ${(props) => (props?.topSite ? '' : '48vh')};
+
+	@media (max-width: 900px) {
+		justify-content: flex-end;
+		height: ${(props) => (props?.topSite ? '250px' : '60px')};
+	}
+
+	@media (max-width: 600px) {
+		margin-top: ${(props) => (props?.topSite ? '' : '37vh')};
+	}
+	& .inner-container {
+		display: flex;
+		@media (max-width: 900px) {
+			margin-bottom: ${(props) => (props?.topSite ? '10px' : '')};
+		}
+	}
 
 	& .javascript {
-		bottom: 250px;
-		right: 200px;
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(1) translate(0%, 0%)'
-				: 'scale(1) translate(-400%, -400%)'};
-		transition: transform 0.5s;
+		margin-left: ${(props) => (props?.topSite ? '190px' : '0px')};
+		margin-right: ${(props) => (props?.topSite ? '40px' : '0px')};
+		margin-top: ${(props) => (props?.topSite ? '20px' : '0px')};
+		transform: ${(props) => (props?.topSite ? 'scale(1)' : 'scale(1)')};
+		transition: all 0.5s ease-out;
+
+		@media (max-width: 900px) {
+			margin-right: ${(props) => (props?.topSite ? '10px' : '')};
+		}
 	}
 
 	& .react {
-		bottom: 250px;
-		right: 50px;
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(1.4) translate(0%, 0%)'
-				: 'scale(1.4) translate(-390%, -290%)'};
-		/* transition: transform 0.5s; */
+		margin-right: ${(props) => (props?.topSite ? '30px' : '')};
+		margin-top: ${(props) => (props?.topSite ? '10px' : '0px')};
+		margin-left: ${(props) => (props?.topSite ? '' : '45px')};
+		transform: ${(props) => (props?.topSite ? 'scale(1.4)' : 'scale(1.4)')};
+		transition: all 0.5s ease-out;
+
+		@media (max-width: 900px) {
+			margin-right: ${(props) => (props?.topSite ? '20px' : '')};
+			margin-bottom: ${(props) => (props?.topSite ? '40px' : '')};
+		}
 	}
 
 	& .typescript {
-		bottom: 150px;
-		right: 300px;
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(1) translate(0%, 0%)'
-				: 'scale(1) translate(-42%, -655%)'};
-		transition: transform 0.5s;
+		margin-left: ${(props) => (props?.topSite ? '30px' : '-85px')};
+		margin-top: ${(props) => (props?.topSite ? '30px' : '0px')};
+		transform: ${(props) => (props?.topSite ? 'scale(1)' : 'scale(1)')};
+		transition: all 0.5s ease-out;
+		@media (max-width: 900px) {
+			margin-left: ${(props) => (props?.topSite ? '90px' : '')};
+			margin-top: ${(props) => (props?.topSite ? '-30px' : '')};
+		}
+	}
+	& .node {
+		margin-left: ${(props) => (props?.topSite ? '80px' : '75px')};
+		margin-top: ${(props) => (props?.topSite ? '20px' : '0px')};
+		transform: ${(props) => (props?.topSite ? 'scale(2)' : 'scale(2.2)')};
+		transition: all 0.5s ease-out;
+		@media (max-width: 900px) {
+			margin-left: ${(props) => (props?.topSite ? '40px' : '')};
+			margin-top: ${(props) => (props?.topSite ? '-30px' : '')};
+		}
 	}
 
 	& .mongodb {
-		bottom: 35px;
-		right: 20px;
-
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(0.9) translate(0%, 0%)'
-				: 'scale(1) translate(-510%, -940%)'};
-		transition: transform 0.5s;
-	}
-
-	& .firebase {
-		bottom: 40px;
-		right: 370px;
-		height: ${(props) => (props?.topSite ? '50px' : '30px')};
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(3) translate(0%, 0%)'
-				: 'scale(2.8) translate(275%, -445%)'};
-		transition: transform 0.5s;
-	}
-
-	& .node {
-		bottom: 150px;
-		right: 90px;
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(2) translate(0%, 0%)'
-				: 'scale(2.2) translate(-70%, -300%)'};
-		transition: 0.5s;
+		margin-left: ${(props) => (props?.topSite ? '80px' : '170px')};
+		margin-right: ${(props) => (props?.topSite ? '20px' : '')};
+		margin-top: ${(props) => (props?.topSite ? '' : '0px')};
+		transform: ${(props) => (props?.topSite ? 'scale(0.9)' : 'scale(1)')};
+		transition: all 0.5s ease-out;
+		@media (max-width: 900px) {
+			margin-left: ${(props) => (props?.topSite ? '30px' : '')};
+			margin-top: ${(props) => (props?.topSite ? '-30px' : '')};
+		}
 	}
 
 	& .mysql {
-		bottom: 40px;
-		right: 170px;
-		transform: ${(props) =>
-			props?.topSite
-				? 'scale(1.4) translate(0%, 0%)'
-				: 'scale(1.5) translate(310%, -620%)'};
-		transition: transform 0.5s;
+		margin-right: ${(props) => (props?.topSite ? '20px' : '')};
+		margin-left: ${(props) => (props?.topSite ? '' : '-100px')};
+		margin-top: ${(props) => (props?.topSite ? '' : '-5px')};
+		transform: ${(props) => (props?.topSite ? 'scale(1.4)' : 'scale(1.5)')};
+		transition: all 0.5s ease-out;
+		@media (max-width: 900px) {
+			margin-left: ${(props) => (props?.topSite ? '110px' : '')};
+			margin-right: ${(props) => (props?.topSite ? '10px' : '')};
+		}
+	}
+
+	& .firebase {
+		margin-left: ${(props) => (props?.topSite ? '90px' : '-110px')};
+		margin-top: ${(props) => (props?.topSite ? '10px' : '0px')};
+		height: ${(props) => (props?.topSite ? '50px' : '')};
+		transform: ${(props) => (props?.topSite ? 'scale(2.7)' : 'scale(2.3)')};
+		transition: all 0.5s ease-in-out;
+		@media (max-width: 900px) {
+			margin-left: ${(props) => (props?.topSite ? '40px' : '')};
+			margin-top: ${(props) => (props?.topSite ? '0px' : '')};
+		}
 	}
 `;
 
 export const Logo = styled.div<LogoProps>`
-	position: absolute;
-	width: ${(props) => (props?.topSite ? '90px' : '40px')};
-	height: ${(props) => (props?.topSite ? '90px' : '40px')};
+	/* position: relative; */
+	width: ${(props) => (props?.topSite ? '80px' : '40px')};
+	height: ${(props) => (props?.topSite ? '80px' : '40px')};
+
+	@media (max-width: 900px) {
+		width: ${(props) => (props?.topSite ? '40px' : '40px')};
+		height: ${(props) => (props?.topSite ? '40px' : '40px')};
+	}
 `;

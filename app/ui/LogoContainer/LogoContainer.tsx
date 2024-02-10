@@ -6,11 +6,61 @@ import { LogoProps } from '@/app/lib/definitions';
 const LogoContainer = ({ topSite }: LogoProps) => {
 	return (
 		<StyledLogoContainer topSite={topSite}>
-			{logoArray.map((logo) => (
-				<Logo key={logo.name} className={logo.name} topSite={topSite}>
-					<Image src={logo.image} fill={true} alt={logo.alt} />
+			<div className='inner-container'>
+				<Logo
+					key={logoArray[0].name}
+					className={logoArray[0].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[0].image} fill={true} alt={logoArray[0].alt} />
 				</Logo>
-			))}
+				<Logo
+					key={logoArray[1].name}
+					className={logoArray[1].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[1].image} fill={true} alt={logoArray[1].alt} />
+				</Logo>
+			</div>
+			<div className='inner-container'>
+				<Logo
+					key={logoArray[2].name}
+					className={logoArray[2].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[2].image} fill={true} alt={logoArray[2].alt} />
+				</Logo>
+				<Logo
+					key={logoArray[3].name}
+					className={logoArray[3].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[3].image} fill={true} alt={logoArray[3].alt} />
+				</Logo>
+				<Logo
+					key={logoArray[4].name}
+					className={logoArray[4].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[4].image} fill={true} alt={logoArray[4].alt} />
+				</Logo>
+			</div>
+			<div className='inner-container'>
+				<Logo
+					key={logoArray[5].name}
+					className={logoArray[5].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[5].image} fill={true} alt={logoArray[5].alt} />
+				</Logo>
+				<Logo
+					key={logoArray[6].name}
+					className={logoArray[6].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[6].image} fill={true} alt={logoArray[6].alt} />
+				</Logo>
+			</div>
 		</StyledLogoContainer>
 	);
 };
