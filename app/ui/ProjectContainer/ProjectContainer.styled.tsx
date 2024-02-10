@@ -9,9 +9,16 @@ export const StyledProjectContainer = styled.div`
 	width: 100vw;
 	z-index: 40;
 	padding-right: 50px;
-	z-index: 40;
 	background-color: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(5px);
+
+	@media (max-width: 1000px) {
+		padding-right: 5px;
+	}
+	@media (max-width: 1000px) {
+		z-index: 60;
+		padding-left: 5px;
+	}
 `;
 
 export const InnerContainer = styled.div`
@@ -20,6 +27,7 @@ export const InnerContainer = styled.div`
 	background-color: var(--background-color);
 	border: 2px solid var(--text-color);
 	width: 60vw;
+	max-width: 1200px;
 	height: 70vh;
 
 	& h2 {
@@ -34,5 +42,10 @@ export const InnerContainer = styled.div`
 		&:hover {
 			color: #f9ead9;
 		}
+	}
+
+	@media (max-width: 1000px) {
+		width: 100vw;
+		height: 80%;
 	}
 `;

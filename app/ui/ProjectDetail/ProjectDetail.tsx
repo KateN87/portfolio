@@ -3,7 +3,7 @@ import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import {
 	ImageContainer,
 	StyledBottomContainer,
-	StyledSecureProject,
+	StyledProjectDetail,
 	StyledTopContainer,
 } from './ProjectDetail.styled';
 import { ProjectProps } from '@/app/lib/definitions';
@@ -101,11 +101,9 @@ const ProjectDetail = ({ project }: ProjectProps) => {
 	};
 
 	return (
-		<StyledSecureProject>
+		<StyledProjectDetail>
 			<StyledTopContainer
-				className={
-					project.title === 'Social Media - fullstack' ? 'version2' : ''
-				}
+				className={project.title === 'Mobile app - expo' ? 'version2' : ''}
 			>
 				<GetLayoutTop name={project.title} />
 			</StyledTopContainer>
@@ -114,7 +112,7 @@ const ProjectDetail = ({ project }: ProjectProps) => {
 			>
 				<GetLayoutBottom name={project.title} />
 			</StyledBottomContainer>
-		</StyledSecureProject>
+		</StyledProjectDetail>
 	);
 };
 

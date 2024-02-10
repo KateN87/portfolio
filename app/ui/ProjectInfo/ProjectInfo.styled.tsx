@@ -7,4 +7,18 @@ export const StyledProjectInfo = styled.div`
 	& p {
 		padding-top: 20px;
 	}
+
+	@media (max-width: 1200px) {
+		padding: 5px;
+
+		& p {
+			padding-top: 10px;
+		}
+	}
+
+	@media (max-width: 500px) {
+		& p {
+			font-size: 14px;
+		}
+	}
 `;

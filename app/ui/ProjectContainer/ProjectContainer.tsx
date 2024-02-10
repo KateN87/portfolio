@@ -5,9 +5,6 @@ import {
 } from './ProjectContainer.styled';
 import { ProjectObject } from '@/app/lib/data';
 import ProjectDetail from '../ProjectDetail/ProjectDetail';
-import BookProject from '../ProjectDetail/BookProject/BookProject';
-import MobileProject from '../ProjectDetail/MobileProject/MobileProject';
-import SocialMediaProject from '../ProjectDetail/SocialMediaProject/SocialMediaProject';
 
 const ProjectContainer = ({
 	setChosenProject,
