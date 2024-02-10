@@ -2,7 +2,6 @@
 import { useRef, useState, WheelEvent } from 'react';
 import {
 	StyledMainContainer,
-	Logos,
 	FirstContainer,
 	SecondContainer,
 } from './page.styled';
@@ -54,7 +53,7 @@ export default function Home() {
 
 	return (
 		<StyledMainContainer onWheel={(e) => wheel(e)}>
-			<FirstContainer ref={firstRef}>
+			<FirstContainer ref={firstRef} topSite={topSite}>
 				<Header />
 				<ProjectsList setChosenProject={setChosenProject} />
 				{chosenProject && (
@@ -65,9 +64,7 @@ export default function Home() {
 				)}
 				<div className='logo-arrow'>
 					<SlArrowDown className='arrowDown' onClick={scrollDown} />
-					<Logos topSite={topSite}>
-						<LogoContainer topSite={topSite} />
-					</Logos>
+					<LogoContainer topSite={topSite} />
 				</div>
 			</FirstContainer>
 
