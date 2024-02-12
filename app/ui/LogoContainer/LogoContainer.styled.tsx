@@ -8,7 +8,6 @@ export const StyledLogoContainer = styled.div<LogoProps>`
 	flex-direction: ${(props) => (props?.topSite ? 'column' : 'row')};
 	height: ${(props) => (props?.topSite ? '300px' : '60px')};
 	width: fit-content;
-	z-index: 90;
 
 	margin-bottom: ${(props) => (props?.topSite ? '35px' : '')};
 	margin-top: ${(props) => (props?.topSite ? '' : '48vh')};
@@ -77,7 +76,7 @@ export const StyledLogoContainer = styled.div<LogoProps>`
 	& .mongodb {
 		margin-left: ${(props) => (props?.topSite ? '80px' : '170px')};
 		margin-right: ${(props) => (props?.topSite ? '20px' : '')};
-		margin-top: ${(props) => (props?.topSite ? '' : '0px')};
+		margin-top: ${(props) => (props?.topSite ? '20px' : '0px')};
 		transform: ${(props) => (props?.topSite ? 'scale(0.9)' : 'scale(1)')};
 		transition: all 0.5s ease-out;
 		@media (max-width: 900px) {
@@ -88,7 +87,7 @@ export const StyledLogoContainer = styled.div<LogoProps>`
 
 	& .mysql {
 		margin-right: ${(props) => (props?.topSite ? '20px' : '')};
-		margin-left: ${(props) => (props?.topSite ? '' : '-100px')};
+		margin-left: ${(props) => (props?.topSite ? '80px' : '-100px')};
 		margin-top: ${(props) => (props?.topSite ? '' : '-5px')};
 		transform: ${(props) => (props?.topSite ? 'scale(1.4)' : 'scale(1.5)')};
 		transition: all 0.5s ease-out;
@@ -102,7 +101,7 @@ export const StyledLogoContainer = styled.div<LogoProps>`
 		margin-left: ${(props) => (props?.topSite ? '90px' : '-110px')};
 		margin-top: ${(props) => (props?.topSite ? '10px' : '0px')};
 		height: ${(props) => (props?.topSite ? '50px' : '')};
-		transform: ${(props) => (props?.topSite ? 'scale(2.7)' : 'scale(2.3)')};
+		transform: ${(props) => (props?.topSite ? 'scale(2)' : 'scale(2.1)')};
 		transition: all 0.5s ease-in-out;
 		@media (max-width: 900px) {
 			margin-left: ${(props) => (props?.topSite ? '40px' : '')};
@@ -112,7 +111,6 @@ export const StyledLogoContainer = styled.div<LogoProps>`
 `;
 
 export const Logo = styled.div<LogoProps>`
-	/* position: relative; */
 	width: ${(props) => (props?.topSite ? '80px' : '40px')};
 	height: ${(props) => (props?.topSite ? '80px' : '40px')};
 

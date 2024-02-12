@@ -2,8 +2,11 @@ import Image from 'next/image';
 import { StyledLogoContainer, Logo } from './LogoContainer.styled';
 import { logoArray } from '@/app/lib/data';
 import { LogoProps } from '@/app/lib/definitions';
+import { useContext } from 'react';
+import { ThemeContext } from '@/app/ThemeContext';
 
 const LogoContainer = ({ topSite }: LogoProps) => {
+	const { theme } = useContext(ThemeContext);
 	return (
 		<StyledLogoContainer topSite={topSite}>
 			<div className='inner-container'>
@@ -35,7 +38,13 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 					className={logoArray[3].name}
 					topSite={topSite}
 				>
-					<Image src={logoArray[3].image} fill={true} alt={logoArray[3].alt} />
+					<Image
+						src={
+							theme === 'dark' ? logoArray[3].image : '/nodejs-logo-dark.png'
+						}
+						fill={true}
+						alt={logoArray[3].alt}
+					/>
 				</Logo>
 				<Logo
 					key={logoArray[4].name}
@@ -58,7 +67,11 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 					className={logoArray[6].name}
 					topSite={topSite}
 				>
-					<Image src={logoArray[6].image} fill={true} alt={logoArray[6].alt} />
+					<Image
+						src={theme === 'dark' ? logoArray[6].image : '/firebase-ar21.png'}
+						fill={true}
+						alt={logoArray[6].alt}
+					/>
 				</Logo>
 			</div>
 		</StyledLogoContainer>
