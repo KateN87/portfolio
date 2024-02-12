@@ -1,6 +1,20 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
 
+export const lightTheme = {
+	text: '#222222',
+	textTransparent: '#22222291',
+	toggleBorder: '#FFF',
+	background: '#FFF',
+};
+
+export const darkTheme = {
+	text: '#f9ead9',
+	textTransparent: '#f9ead98d',
+	toggleBorder: '#6B8096',
+	background: '#222222',
+};
+
 const GlobalStyles = createGlobalStyle`
   :root {
 	--max-width: 1100px;
@@ -8,25 +22,29 @@ const GlobalStyles = createGlobalStyle`
 		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-	--background-color: #222222;
-	--text-color: #f9ead9;
+	--background-color: ${({ theme }) => theme.background};
+	--text-color: ${({ theme }) => theme.text};
+	--text-transparent: ${({ theme }) => theme.textTransparent};
 }
 
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	color: var(--text-color);
+	
 }
 
 html,
 body {
 	max-width: 100vw;
 	overflow: hidden;
+	
 }
 
 body {
-	background-color: var(--background-color);
+	background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.2s ease-in, color 0.2s ease-in;
 }
 /* 
 h1{
