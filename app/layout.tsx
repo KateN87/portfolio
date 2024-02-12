@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from './lib/registry';
 import GlobalStyles from './globalstyles';
+import ThemeClient from './ThemeProvider';
+import { ThemeProvider } from './ThemeContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,12 +20,16 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<link rel='icon' type='image/x-icon' href='/favicon.png'></link>
-			<body className={inter.className}>
-				<StyledComponentsRegistry>
-					<GlobalStyles />
-					{children}
-				</StyledComponentsRegistry>
-			</body>
+			<ThemeProvider>
+				<ThemeClient>
+					<body className={inter.className}>
+						<StyledComponentsRegistry>
+							<GlobalStyles />
+							{children}
+						</StyledComponentsRegistry>
+					</body>
+				</ThemeClient>
+			</ThemeProvider>
 		</html>
 	);
 }
