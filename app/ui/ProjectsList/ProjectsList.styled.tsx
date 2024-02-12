@@ -9,11 +9,6 @@ export const StyledProjectList = styled.div`
 	height: 600px;
 	z-index: 50;
 
-	& h2 {
-		font-size: 36px;
-		margin-bottom: 20px;
-	}
-
 	& li {
 		display: flex;
 		align-items: center;

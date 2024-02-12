@@ -17,13 +17,13 @@ export const StyledMainContainer = styled.div<ChosenProps>`
 		width: 74px;
 		height: 74px;
 		bottom: 0;
-		fill: #f9ead984;
+		fill: var(--text-transparent);
 		left: 45vw;
 		cursor: pointer;
 		z-index: 100;
 
 		& :hover {
-			fill: #f9ead9;
+			fill: var(--text-color);
 		}
 	}
 

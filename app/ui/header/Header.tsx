@@ -4,14 +4,23 @@ import {
 	CodeImageContainer,
 	ProfileContainer,
 	ProfileImageContainer,
+	StyledButton,
 } from './Header.styled';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { ThemeContext } from '@/app/ThemeContext';
 
 export const Header = () => {
+	const { theme, toggleTheme } = useContext(ThemeContext);
 	return (
 		<StyledHeader>
+			<StyledButton onClick={toggleTheme}>Hello</StyledButton>
 			<CodeImageContainer>
-				<Image src='/code-dark3.png' fill={true} alt='javascript code' />
+				<Image
+					src={theme === 'dark' ? '/code-dark3.png' : '/code-light.png'}
+					fill={true}
+					alt='javascript code'
+				/>
 			</CodeImageContainer>
 			<ProfileContainer>
 				<div className='text'>

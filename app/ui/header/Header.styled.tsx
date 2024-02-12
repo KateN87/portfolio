@@ -12,6 +12,10 @@ export const StyledHeader = styled.div`
 		height: 340px;
 	}
 `;
+export const StyledButton = styled.button`
+	z-index: 2;
+	height: 20px;
+`;
 
 export const CodeImageContainer = styled.div`
 	position: absolute;

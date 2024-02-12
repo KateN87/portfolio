@@ -1,5 +1,6 @@
 'use client';
-import { useRef, useState, WheelEvent } from 'react';
+import { useContext, useRef, useState, WheelEvent } from 'react';
+
 import {
 	StyledMainContainer,
 	FirstContainer,
@@ -12,6 +13,7 @@ import About from './ui/About/About';
 import { TechStack } from './ui/TechStack/TechStack';
 import ProjectsList from './ui/ProjectsList/ProjectsList';
 import ProjectContainer from './ui/ProjectContainer/ProjectContainer';
+import { ThemeContext } from './ThemeContext';
 
 export default function Home() {
 	const firstRef = useRef<HTMLDivElement | null>(null);

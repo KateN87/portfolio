@@ -11,7 +11,6 @@ const ProjectsList = ({ setChosenProject }: ProjectListProps) => {
 	];
 	return (
 		<StyledProjectList>
-			<h2>My Projects</h2>
 			<ul>
 				{projectArray.map((project) => (
 					<li key={project} onClick={() => setChosenProject(project)}>
