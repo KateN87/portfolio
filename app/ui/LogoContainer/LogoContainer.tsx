@@ -17,15 +17,7 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 				>
 					<Image src={logoArray[0].image} fill={true} alt={logoArray[0].alt} />
 				</Logo>
-				<Logo
-					key={logoArray[1].name}
-					className={logoArray[1].name}
-					topSite={topSite}
-				>
-					<Image src={logoArray[1].image} fill={true} alt={logoArray[1].alt} />
-				</Logo>
-			</div>
-			<div className='inner-container'>
+
 				<Logo
 					key={logoArray[2].name}
 					className={logoArray[2].name}
@@ -33,15 +25,15 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 				>
 					<Image src={logoArray[2].image} fill={true} alt={logoArray[2].alt} />
 				</Logo>
+			</div>
+			<div className='inner-container'>
 				<Logo
 					key={logoArray[3].name}
 					className={logoArray[3].name}
 					topSite={topSite}
 				>
 					<Image
-						src={
-							theme === 'dark' ? logoArray[3].image : '/nodejs-logo-dark.png'
-						}
+						src={theme === 'dark' ? logoArray[3].image : '/node-logo-dark.svg'}
 						fill={true}
 						alt={logoArray[3].alt}
 					/>
@@ -51,7 +43,20 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 					className={logoArray[4].name}
 					topSite={topSite}
 				>
-					<Image src={logoArray[4].image} fill={true} alt={logoArray[4].alt} />
+					<Image
+						src={
+							theme === 'dark' ? logoArray[4].image : '/mongodb-logo-dark.svg'
+						}
+						fill={true}
+						alt={logoArray[4].alt}
+					/>
+				</Logo>
+				<Logo
+					key={logoArray[1].name}
+					className={logoArray[1].name}
+					topSite={topSite}
+				>
+					<Image src={logoArray[1].image} fill={true} alt={logoArray[1].alt} />
 				</Logo>
 			</div>
 			<div className='inner-container'>
@@ -68,7 +73,9 @@ const LogoContainer = ({ topSite }: LogoProps) => {
 					topSite={topSite}
 				>
 					<Image
-						src={theme === 'dark' ? logoArray[6].image : '/firebase-ar21.png'}
+						src={
+							theme === 'dark' ? logoArray[6].image : '/firebase-logo-dark.svg'
+						}
 						fill={true}
 						alt={logoArray[6].alt}
 					/>
