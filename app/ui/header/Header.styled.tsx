@@ -1,4 +1,5 @@
 'use client';
+import { ToggleProps } from '@/app/lib/definitions';
 import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
@@ -11,10 +12,6 @@ export const StyledHeader = styled.div`
 	@media (max-width: 600px) {
 		height: 340px;
 	}
-`;
-export const StyledButton = styled.button`
-	z-index: 2;
-	height: 20px;
 `;
 
 export const CodeImageContainer = styled.div`

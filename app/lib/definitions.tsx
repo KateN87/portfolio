@@ -10,6 +10,10 @@ export type LogoProps = {
 	topSite: boolean;
 };
 
+export type ToggleProps = {
+	isActive: boolean;
+};
+
 export type ProjectListProps = {
 	setChosenProject: Dispatch<SetStateAction<string>>;
 	chosenProject?: string;
