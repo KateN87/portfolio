@@ -32,15 +32,19 @@ export const InnerContainer = styled.div`
 
 	& h2 {
 		display: flex;
-		justify-content: flex-end;
+		align-self: flex-end;
+		width: fit-content;
 		height: fit-content;
 		padding-right: 10px;
-		font-size: 36px;
-		color: #f9ead984;
+		padding-top: 5px;
+		font-family: sans-serif;
+		font-size: 30px;
+		color: ${({ theme }) => theme.textTransparent};
+		/*  #f9ead984; */
 		cursor: pointer;
 
 		&:hover {
-			color: #f9ead9;
+			color: ${({ theme }) => theme.text};
 		}
 	}
 
