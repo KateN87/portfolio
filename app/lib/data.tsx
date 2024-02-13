@@ -19,12 +19,12 @@ export const logoArray: logoInfo[] = [
 	},
 	{
 		alt: 'node logo',
-		image: '/node-logo.svg',
+		image: '/node-logo-light.svg',
 		name: 'node',
 	},
 	{
 		alt: 'mongodb logo',
-		image: '/mongodb-logo.svg',
+		image: '/mongodb-logo-light.svg',
 		name: 'mongodb',
 	},
 	{
@@ -34,7 +34,7 @@ export const logoArray: logoInfo[] = [
 	},
 	{
 		alt: 'firebase logo',
-		image: '/firebase-logo.png',
+		image: '/firebase-logo-light.svg',
 		name: 'firebase',
 	},
 ];
