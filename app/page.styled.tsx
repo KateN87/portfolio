@@ -54,6 +54,7 @@ export const SecondContainer = styled.div`
 	flex-direction: column;
 	height: 100vh;
 	width: 100vw;
+	padding-top: 50px;
 
 	& .tech-about {
 		display: flex;
